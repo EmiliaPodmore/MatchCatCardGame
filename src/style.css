@@ -7,10 +7,11 @@ body {
   margin: 0 auto;
 }
 h1 {
+  margin: 16px;
   font-family: "Poppins", sans-serif;
-  font-size: 38px;
-  word-spacing: 1px;
+  font-size: 48px;
   color: #231f20;
+  text-shadow: 2px -1px rgba(250, 248, 240, 1);
 }
 .wrapper {
   padding: 25px;
@@ -72,18 +73,19 @@ h1 {
   height: 100%;
   position: absolute;
   border-radius: 7px;
-  background: #fff;
+  background: #faf8f0;
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  border: 2px solid #231f20;
+  border: 1px dashed #231f20;
   transition: transform 0.25s linear;
 }
 .card .front-view img {
   width: 50px;
 }
 .card .back-view img {
-  max-width: 80px;
+  max-width: 70px;
+  border-radius: 3px;
 }
 .card .back-view {
   transform: rotateY(-180deg);
@@ -94,7 +96,6 @@ h1 {
 .card.flip .front-view {
   transform: rotateY(180deg);
 }
-
 footer {
   color: #231f20;
   font-size: 18px;
@@ -111,7 +112,7 @@ a:hover {
 
 @media (max-width: 700px) {
   h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
   .cards {
     height: 350px;
@@ -121,13 +122,13 @@ a:hover {
     width: 35px;
   }
   .card .back-view img {
-    max-width: 65px;
+    max-width: 55px;
   }
 }
 
 @media (max-width: 530px) {
   h1 {
-    font-size: 16px;
+    font-size: 30px;
   }
   .cards {
     height: 250px;
@@ -137,9 +138,9 @@ a:hover {
     width: 30px;
   }
   .card .back-view img {
-    max-width: 55px;
+    max-width: 45px;
   }
   footer {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
