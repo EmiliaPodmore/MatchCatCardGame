@@ -17,7 +17,7 @@ h1 {
   padding: 25px;
   margin: 0 auto;
   border-radius: 10px;
-  border: 2px solid #231f20;
+  border: 2px dashed #231f20;
   background: #faf8f0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +77,7 @@ h1 {
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  border: 1px dashed #231f20;
+  border: 1px solid #231f20;
   transition: transform 0.25s linear;
 }
 .card .front-view img {
