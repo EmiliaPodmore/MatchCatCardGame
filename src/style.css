@@ -1,3 +1,9 @@
+:root {
+  --colour-primary: #231f20;
+  --colour-secondary: #faf8f0;
+  --font-main: "Barrio", system-ui;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -8,7 +14,7 @@ body {
 }
 h1 {
   margin: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
   font-size: 48px;
   color: #231f20;
   text-shadow: 2px -1px rgba(250, 248, 240, 1);
@@ -18,7 +24,7 @@ h1 {
   margin: 0 auto;
   border-radius: 10px;
   border: 2px dashed #231f20;
-  background: #faf8f0;
+  background: var(--colour-secondary);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,7 +79,7 @@ h1 {
   height: 100%;
   position: absolute;
   border-radius: 7px;
-  background: #faf8f0;
+  background: var(--colour-secondary);
   pointer-events: none;
   backface-visibility: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -97,17 +103,17 @@ h1 {
   transform: rotateY(180deg);
 }
 footer {
-  color: #231f20;
+  color: var(--colour-primary);
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
   padding: 20px;
 }
 a {
-  color: #231f20;
+  color: var(--colour-primary);
   text-decoration: none;
 }
 a:hover {
-  color: #faf8f0;
+  color: var(--colour-secondary);
 }
 
 @media (max-width: 700px) {
