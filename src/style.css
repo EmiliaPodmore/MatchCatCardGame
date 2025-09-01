@@ -19,6 +19,12 @@ h1 {
   color: #231f20;
   text-shadow: 2px -1px rgba(250, 248, 240, 1);
 }
+.timer {
+  color: var(--colour-primary);
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 8px;
+}
 .wrapper {
   padding: 25px;
   margin: 0 auto;
