@@ -26,7 +26,6 @@ function stopTimer() {
 
 // Flip cards
 function flipCard({ target: clickedCard }) {
-  // Start timer on very first flip
   if (!timerStarted) {
     startTimer();
     timerStarted = true;
@@ -50,11 +49,10 @@ function matchCards(img1, img2) {
   if (img1 === img2) {
     matched++;
     if (matched == 8) {
-      // Stop timer when game is won
       stopTimer();
       setTimeout(() => {
         alert(`You won in ${seconds} seconds!`);
-        shuffleCard(); // restart game
+        shuffleCard();
       }, 500);
     }
     cardOne.removeEventListener("click", flipCard);
@@ -85,12 +83,12 @@ function shuffleCard() {
   clearInterval(timer);
   document.getElementById("timer").innerHTML = `Time: <strong>0</strong>s`;
 
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-  arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+  array.sort(() => (Math.random() > 0.5 ? 1 : -1));
   cards.forEach((card, i) => {
     card.classList.remove("flip");
     let imgTag = card.querySelector(".back-view img");
-    imgTag.src = `images/img-${arr[i]}.png`;
+    imgTag.src = `images/img-${array[i]}.png`;
     card.addEventListener("click", flipCard);
   });
 }
